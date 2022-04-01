@@ -12,8 +12,8 @@ const CoinDetails = () => {
   return (
     <div className="h-[90vh] px-4 pt-20 pb-24 mx-auto max-w-7xl md:px-2">
       <div className="h-full grid grid-cols-1 md:grid-cols-2 justify-center g-4 md:justify-around content-center">
-        <div>
-          <h1 className="text-3xl">General Info</h1>
+        <div className="order-2 md:order-1">
+          <h1 className="text-3xl text-red-600">General Info</h1>
           <hr />
           <h1>Coin Name : {coin.name}</h1>
           <h1>Market Cop Rank : {coin.market_cap_rank}</h1>
@@ -39,7 +39,7 @@ const CoinDetails = () => {
 
           <br />
 
-          <h1 className="text-3xl">Scores</h1>
+          <h1 className="text-3xl text-green-600">Scores</h1>
           <hr />
           <h1>
             Community Score : {coin.community_score ? coin.community_score : 0}
@@ -55,11 +55,12 @@ const CoinDetails = () => {
             {coin.public_interest_score ? coin.public_interest_score : 0}
           </h1>
         </div>
-        <div className="flex justify-center items-center">
+        <div className="order-1 md:order-2 flex justify-center items-center sm: mr-48 mb-16">
           <img src={coin.image?.large} alt="coinImage" />
         </div>
       </div>
     </div>
+    // mr-48 mb-6
   );
 };
 
