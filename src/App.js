@@ -21,8 +21,8 @@ const App = () => {
         <Route path="/coins" element={<Coins />}></Route>
         <Route path="/coin-details/:id" element={<CoinDetails />}></Route>
         <Route path="/contact" element={<Contact />}>
-          <Route path="/bd-adress" element={<BdAddress />} />
-          <Route path="/usa-adress" element={<UsAddress />} />
+          <Route path="bd-address" element={<BdAddress />} />
+          <Route path="usa-address" element={<UsAddress />} />
         </Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="*" element={<NotFound />}></Route>
